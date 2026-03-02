@@ -115,6 +115,7 @@ else ifeq ($(PLATFORM), win)
 		-lglu32\
 		-lgdi32\
 		-lopengl32\
+		-lws2_32\
 		-llua
 
 	DLL_FILES = \

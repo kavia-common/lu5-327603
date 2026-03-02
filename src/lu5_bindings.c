@@ -2,6 +2,7 @@
 #include "lu5_window.h"
 #include "lu5_geometry.h"
 
+#include "bindings/delta_api.h"
 #include "bindings/classes.h"
 #include "bindings/lu5_math.h"
 #include "bindings/lu5_vector.h"
@@ -216,4 +217,7 @@ void lu5_register_symbols(lua_State *L)
 	LUA_ADD_FUNCTION_BY_NAME(L, "constrain", lu5_constrain);
 
 	lu5_register_constants(L);
+
+	/* Delta robot controller-compatible API */
+	lu5_register_delta_api(L);
 }
